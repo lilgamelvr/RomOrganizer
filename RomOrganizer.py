@@ -1,6 +1,7 @@
 import os
 import shutil
 
+
 def organize_nes_games(source_dir, destination_folder="NES_Games", include_subdirs=False):
     # Ensure destination folder exists
     destination_path = os.path.join(source_dir, destination_folder)
@@ -24,6 +25,7 @@ def organize_nes_games(source_dir, destination_folder="NES_Games", include_subdi
                 if os.path.abspath(source_file) != os.path.abspath(dest_file):
                     shutil.move(source_file, dest_file)
                     print(f"Moved: {source_file} -> {dest_file}")
+
 
 def organize_snes_games(source_dir, destination_folder="SNES_Games", include_subdirs=False):
     # Ensure destination folder exists
@@ -49,6 +51,7 @@ def organize_snes_games(source_dir, destination_folder="SNES_Games", include_sub
                     shutil.move(source_file, dest_file)
                     print(f"Moved: {source_file} -> {dest_file}")
 
+
 def organize_gb_games(source_dir, destination_folder="GB_Games", include_subdirs=False):
     # Ensure destination folder exists
     destination_path = os.path.join(source_dir, destination_folder)
@@ -72,6 +75,7 @@ def organize_gb_games(source_dir, destination_folder="GB_Games", include_subdirs
                 if os.path.abspath(source_file) != os.path.abspath(dest_file):
                     shutil.move(source_file, dest_file)
                     print(f"Moved: {source_file} -> {dest_file}")
+
 
 if __name__ == "__main__":
     # Replace this with your actual directory path
